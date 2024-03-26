@@ -9,7 +9,11 @@
   --clr-secondary-300: #f4a261;
   --clr-secondary-400: #e76f51;
 
+  --clr-background-200: #dee2e6;
+  --clr-background-800: #adb5bd;
+
   --ff-primary: "Hanken Grotesk", sans-serif;
+  --ff-secondary: "Source Serif 4", sans-serif;
 
   --ff-page-title: var(--ff-primary);
   --ff-content-title: var(--ff-primary);
@@ -128,12 +132,14 @@ svg {
 body {
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
+
+  background-image: linear-gradient(to right, var(--clr-background-200), var(--clr-background-800));
 }
 
 /* MAIN CLASSES */
 .entire-layout {
   display: grid;
-  grid-template-columns: 7.5rem 20rem 1fr;
+  grid-template-columns: 8.5rem 20rem 1fr;
   grid-template-rows: 90vh;
 
   column-gap: 2.5vw;
@@ -148,7 +154,8 @@ body {
 .container {
   background-color: var(--clr-primary-700);
   border-radius: 1.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
+  /* overflow: hidden; */
 }
 
 .blob {
@@ -159,23 +166,16 @@ body {
   padding-bottom: 0.35rem;
 }
 
-.blob-columns-indefinite {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: auto;
-  column-gap: 0.5rem;
-}
-
-.blob-rows-indefinite {
-  display: grid;
-  grid-auto-flow: row;
-  grid-auto-rows: auto;
-  row-gap: 0.5rem;
-}
-
 .sidebar-container {
-  display: grid;
-  grid-template-rows: auto 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0.75rem;
+}
+
+.icon-sizing {
+  font-size: 4rem;
+  height: 7rem;
 }
 
 .content-overview-stack {
@@ -185,9 +185,9 @@ body {
 }
 
 .content-main-columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .profile-picture-set {
@@ -210,45 +210,86 @@ body {
 }
 
 .sidebar-clock {
-  display: grid;
-  grid-template-rows: repeat(3, calc(var(--fs-list-medium) * 0.9));
-  text-align: center;
-  font-size: var(--fs-list-medium);
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar-icons {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  width: 85%;
+.sidebar-clock p {
+  text-align: center;
+  font-size: var(--fs-list-medium);
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-100);
+}
+
+.sidebar-clock p:nth-child(1) {
+  font-size: var(--fs-600);
 }
 
 .sidebar-icons-section {
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 
-.stack {
-  display: grid;
-  /* grid-template-rows: repeat(4, calc(var(--fs-list-medium) * 4)); */
+.flex-shrink-to-content {
+  align-items: flex-start;
+}
+
+.flex-vertical-gap-300 {
+  /* display: grid;
   grid-template-rows: auto auto auto auto;
-  /* grid-auto-flow: row;
-    grid-auto-rows: auto; */
-  row-gap: 0.5rem;
+  row-gap: 0.5rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.stack-meeting-item {
-  display: grid;
-  grid-template-rows: repeat(4, calc(var(--fs-list-small) * 0.9));
-  background-color: var(--clr-secondary-200);
+.flex-vertical-gap-500 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.flex-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.more-info-grid {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.max-width-200 {
+  max-width: 30rem;
+}
+
+.max-width-500 {
+  max-width: 300rem;
+}
+
+.meeting-item {
+  /* display: grid;
+  grid-template-rows: repeat(4, calc(var(--fs-list-small) * 0.9));
+  */
+  background-color: var(--clr-secondary-200);
   font-size: var(--fs-list-small);
 }
 
-.stack-meeting-item p:nth-child(1) {
+.meeting-item p {
+  margin-bottom: -0.25rem;
+}
+
+.meeting-item p:nth-child(1) {
   font-weight: var(--fw-bold);
 }
 
-.stack-meeting-item p:nth-child(2) {
+.meeting-item p:nth-child(2) {
   font-weight: var(--fw-bold);
 }
 
@@ -277,6 +318,12 @@ body {
   background-color: var(--clr-secondary-400);
 }
 
+.text-center-full {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* UTILITY CLASSES */
 .main-clr-primary-900 {
   color: #0d1b2a;
@@ -298,7 +345,12 @@ body {
   color: #e0e1dd;
 }
 
-/* CSS classes */
+.text-sc-logo {
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-800);
+  font-weight: var(--fw-bold);
+}
+
 .text-page-title {
   font-family: var(--ff-primary);
   font-size: var(--fs-page-title);

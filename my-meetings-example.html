@@ -11,6 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
     <link rel="stylesheet" href="my-meetings.css" class="stylesheet" />
   </head>
   <body>
@@ -23,53 +31,58 @@
           <p>12:00 pm</p>
         </div>
 
-        <!-- top aligned icons -->
-        <div class="sidebar-icons">
-          <div class="sidebar-icons-section">
-            <img src="./placeholder-icon.png" alt="My Calendar" />
-            <img src="./placeholder-icon.png" alt="My Meetings" />
-            <img src="./placeholder-icon.png" alt="My Chats" />
-            <img src="./placeholder-icon.png" alt="My Courses" />
-            <img src="./placeholder-icon.png" alt="My Settings" />
-          </div>
-
-          <!-- bottom aligned icons -->
-          <div class="sidebar-icons-section">
-            <div></div>
-            <div></div>
-            <img src="./placeholder-icon.png" alt="Search" />
-            <img src="./placeholder-icon.png" alt="SC Logo" />
-            <img src="./placeholder-icon.png" alt="UA Logo" />
-          </div>
+        <div class="sidebar-icons-section">
+          <i
+            class="fas fa-calendar blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <i
+            class="fas fa-clock blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <i
+            class="fas fa-message blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <i
+            class="fas fa-book blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <i
+            class="fas fa-gear blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <i
+            class="fas fa-search blob pair-clr-primary-500 text-center-full icon-sizing"
+          ></i>
+          <div class="text-sc-logo main-clr-primary-100 text-center-full">SC</div>
+          <img src="./ua-logo.png" alt="UA Logo" />
         </div>
       </div>
 
       <div class="content-overview-stack">
         <!-- page title -->
-        <div class="pair-clr-primary-700 text-page-title container">
+        <div
+          class="pair-clr-primary-700 text-page-title container text-center-full"
+        >
           My Meetings
         </div>
         <!-- list of meetings/items -->
-        <div class="container stack">
-          <div class="container stack-meeting-item">
+        <div class="container flex-vertical-gap-300">
+          <div class="container meeting-item">
             <p>Exam Study</p>
             <p>PSIO 201</p>
             <p>Sun Mar 24 3 pm - 6 pm</p>
             <p>Psychology Bldg.</p>
           </div>
-          <div class="container stack-meeting-item">
+          <div class="container meeting-item">
             <p>Exam Study</p>
             <p>PSIO 201</p>
             <p>Sun Mar 24 3 pm - 6 pm</p>
             <p>Psychology Bldg.</p>
           </div>
-          <div class="container stack-meeting-item">
+          <div class="container meeting-item">
             <p>Exam Study</p>
             <p>PSIO 201</p>
             <p>Sun Mar 24 3 pm - 6 pm</p>
             <p>Psychology Bldg.</p>
           </div>
-          <div class="container stack-meeting-item">
+          <div class="container meeting-item">
             <p>Exam Study</p>
             <p>PSIO 201</p>
             <p>Sun Mar 24 3 pm - 6 pm</p>
@@ -77,11 +90,11 @@
           </div>
         </div>
         <!-- button bar at bottom of list -->
-        <div class="container">button bar</div>
+        <div class="container"></div>
         <!-- main content section -->
       </div>
 
-      <div class="container content-main-container">
+      <div class="container flex-vertical-gap-300">
         <!-- ALL INSIDE MAIN CONTENT SECTION -->
 
         <!-- title -->
@@ -91,53 +104,49 @@
 
         <div class="content-main-columns">
           <!-- PRIMARY INFO (LEFT HAND) -->
-          <div>
-            <div class="blob-rows-indefinite">
-              <div class="xyz blob pair-clr-secondary-400 text-blob-heading">
+          <div class="flex-vertical-gap-500">
+            <div class="flex-vertical-gap-300 flex-shrink-to-content">
+              <div class="blob pair-clr-secondary-400 text-blob-heading">
                 Time
               </div>
 
               <!-- time blocks -->
-              <div class="blob-columns-indefinite text-blob-content">
+              <div class="flex-horizontal text-blob-content">
                 <div class="blob pair-clr-primary-400">March 25, 2024</div>
                 <div class="blob pair-clr-primary-400">10:00 am</div>
                 <div class="blob pair-clr-primary-500">to</div>
                 <div class="blob pair-clr-primary-400">12:00 pm</div>
               </div>
             </div>
-
-            <!-- location -->
-            <div>
+            <div class="flex-vertical-gap-300 flex-shrink-to-content">
               <!-- location heading -->
               <div class="blob pair-clr-secondary-400 text-blob-heading">
                 Location
               </div>
 
               <!-- location blocks -->
-              <div class="blob-columns-indefinite text-blob-content">
+              <div class="flex-horizontal text-blob-content">
                 <div class="blob pair-clr-primary-400">Psychology Building</div>
                 <div class="blob pair-clr-primary-500">at</div>
                 <div class="blob pair-clr-primary-500">Room</div>
                 <div class="blob pair-clr-primary-400">312</div>
               </div>
             </div>
-
-            <!-- who is attending -->
-            <div>
+            <div class="flex-vertical-gap-300 flex-shrink-to-content">
               <!-- heading -->
               <div class="blob pair-clr-secondary-400 text-blob-heading">
                 Who's Attending
               </div>
 
               <!-- attending blocks -->
-              <div class="blob-columns-indefinite text-blob-content">
+              <div class="flex-horizontal text-blob-content">
                 <div class="blob pair-clr-primary-400">3</div>
                 <div class="blob pair-clr-primary-500">out of</div>
                 <div class="blob pair-clr-primary-400">6</div>
               </div>
 
               <!-- list of people -->
-              <div class="container pair-clr-primary-500">
+              <div class="container flex-vertical-gap-300 pair-clr-primary-500">
                 <div class="blob pair-clr-primary-400 profile-picture-set">
                   <img src="sample-pfp-maya.png" alt="Maya's Profile Picture" />
                   <p>Maya Garcia</p>
@@ -147,7 +156,10 @@
                   <p>Amir Khan</p>
                 </div>
                 <div class="blob pair-clr-primary-400 profile-picture-set">
-                  <img src="sample-pfp-malik.png" alt="Malik's Profile Picture" />
+                  <img
+                    src="sample-pfp-malik.png"
+                    alt="Malik's Profile Picture"
+                  />
                   <p>Malik Johnson</p>
                 </div>
               </div>
@@ -155,12 +167,12 @@
           </div>
 
           <!-- SECONDARY INFO (RIGHT HAND) -->
-          <div class="blob-rows-indefinite">
+          <div class="flex-vertical-gap-300 flex-shrink-to-content">
             <div class="blob pair-clr-secondary-400 text-blob-heading">
               More Info
-              <!-- more info heading -->
             </div>
-            <div class="blob-columns-indefinite">
+
+            <div class="more-info-grid">
               <div class="blob pair-clr-primary-500 text-blob-heading">
                 owned by
               </div>
@@ -168,8 +180,6 @@
                 <img src="sample-pfp-maya.png" alt="Maya's Profile Picture" />
                 <p>Maya Garcia</p>
               </div>
-            </div>
-            <div class="blob-columns-indefinite">
               <div class="blob pair-clr-primary-500 text-blob-heading">
                 to study
               </div>
@@ -177,7 +187,10 @@
                 PSIO 201
               </div>
             </div>
-            <div class="blob pair-clr-primary-500 text-list-small">
+
+            <div
+              class="blob pair-clr-primary-500 text-list-small max-width-200"
+            >
               <p>
                 During this session, we'll delve into crucial topics such as
                 cellular physiology, organ systems, homeostasis, and more. Led
