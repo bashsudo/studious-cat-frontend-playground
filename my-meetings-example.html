@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Meetings Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="my-meetings.css" class="stylesheet" />
+  </head>
+  <body>
+    <div class="entire-layout">
+      <!-- sidebar -->
+      <div class="container sidebar-container">
+        <div class="sidebar-clock text-sidebar">
+          <p>Sun</p>
+          <p>Mar 24</p>
+          <p>12:00 pm</p>
+        </div>
+
+        <!-- top aligned icons -->
+        <div class="sidebar-icons">
+          <div class="sidebar-icons-section">
+            <img src="./placeholder-icon.png" alt="My Calendar" />
+            <img src="./placeholder-icon.png" alt="My Meetings" />
+            <img src="./placeholder-icon.png" alt="My Chats" />
+            <img src="./placeholder-icon.png" alt="My Courses" />
+            <img src="./placeholder-icon.png" alt="My Settings" />
+          </div>
+
+          <!-- bottom aligned icons -->
+          <div class="sidebar-icons-section">
+            <div></div>
+            <div></div>
+            <img src="./placeholder-icon.png" alt="Search" />
+            <img src="./placeholder-icon.png" alt="SC Logo" />
+            <img src="./placeholder-icon.png" alt="UA Logo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="content-overview-stack">
+        <!-- page title -->
+        <div class="pair-clr-primary-700 text-page-title container">
+          My Meetings
+        </div>
+        <!-- list of meetings/items -->
+        <div class="container stack">
+          <div class="container stack-meeting-item">
+            <p>Exam Study</p>
+            <p>PSIO 201</p>
+            <p>Sun Mar 24 3 pm - 6 pm</p>
+            <p>Psychology Bldg.</p>
+          </div>
+          <div class="container stack-meeting-item">
+            <p>Exam Study</p>
+            <p>PSIO 201</p>
+            <p>Sun Mar 24 3 pm - 6 pm</p>
+            <p>Psychology Bldg.</p>
+          </div>
+          <div class="container stack-meeting-item">
+            <p>Exam Study</p>
+            <p>PSIO 201</p>
+            <p>Sun Mar 24 3 pm - 6 pm</p>
+            <p>Psychology Bldg.</p>
+          </div>
+          <div class="container stack-meeting-item">
+            <p>Exam Study</p>
+            <p>PSIO 201</p>
+            <p>Sun Mar 24 3 pm - 6 pm</p>
+            <p>Psychology Bldg.</p>
+          </div>
+        </div>
+        <!-- button bar at bottom of list -->
+        <div class="container">button bar</div>
+        <!-- main content section -->
+      </div>
+
+      <div class="container content-main-container">
+        <!-- ALL INSIDE MAIN CONTENT SECTION -->
+
+        <!-- title -->
+        <div class="blob pair-clr-secondary-200 text-content-title">
+          Exam Study
+        </div>
+
+        <div class="content-main-columns">
+          <!-- PRIMARY INFO (LEFT HAND) -->
+          <div>
+            <div class="blob-rows-indefinite">
+              <div class="xyz blob pair-clr-secondary-400 text-blob-heading">
+                Time
+              </div>
+
+              <!-- time blocks -->
+              <div class="blob-columns-indefinite text-blob-content">
+                <div class="blob pair-clr-primary-400">March 25, 2024</div>
+                <div class="blob pair-clr-primary-400">10:00 am</div>
+                <div class="blob pair-clr-primary-500">to</div>
+                <div class="blob pair-clr-primary-400">12:00 pm</div>
+              </div>
+            </div>
+
+            <!-- location -->
+            <div>
+              <!-- location heading -->
+              <div class="blob pair-clr-secondary-400 text-blob-heading">
+                Location
+              </div>
+
+              <!-- location blocks -->
+              <div class="blob-columns-indefinite text-blob-content">
+                <div class="blob pair-clr-primary-400">Psychology Building</div>
+                <div class="blob pair-clr-primary-500">at</div>
+                <div class="blob pair-clr-primary-500">Room</div>
+                <div class="blob pair-clr-primary-400">312</div>
+              </div>
+            </div>
+
+            <!-- who is attending -->
+            <div>
+              <!-- heading -->
+              <div class="blob pair-clr-secondary-400 text-blob-heading">
+                Who's Attending
+              </div>
+
+              <!-- attending blocks -->
+              <div class="blob-columns-indefinite text-blob-content">
+                <div class="blob pair-clr-primary-400">3</div>
+                <div class="blob pair-clr-primary-500">out of</div>
+                <div class="blob pair-clr-primary-400">6</div>
+              </div>
+
+              <!-- list of people -->
+              <div class="container pair-clr-primary-500">
+                <div class="blob pair-clr-primary-400 profile-picture-set">
+                  <img src="sample-pfp-maya.png" alt="Maya's Profile Picture" />
+                  <p>Maya Garcia</p>
+                </div>
+                <div class="blob pair-clr-primary-400 profile-picture-set">
+                  <img src="sample-pfp-amir.png" alt="Amir's Profile Picture" />
+                  <p>Amir Khan</p>
+                </div>
+                <div class="blob pair-clr-primary-400 profile-picture-set">
+                  <img src="sample-pfp-malik.png" alt="Malik's Profile Picture" />
+                  <p>Malik Johnson</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECONDARY INFO (RIGHT HAND) -->
+          <div class="blob-rows-indefinite">
+            <div class="blob pair-clr-secondary-400 text-blob-heading">
+              More Info
+              <!-- more info heading -->
+            </div>
+            <div class="blob-columns-indefinite">
+              <div class="blob pair-clr-primary-500 text-blob-heading">
+                owned by
+              </div>
+              <div class="blob pair-clr-primary-400 profile-picture-set">
+                <img src="sample-pfp-maya.png" alt="Maya's Profile Picture" />
+                <p>Maya Garcia</p>
+              </div>
+            </div>
+            <div class="blob-columns-indefinite">
+              <div class="blob pair-clr-primary-500 text-blob-heading">
+                to study
+              </div>
+              <div class="blob pair-clr-primary-400 text-blob-heading">
+                PSIO 201
+              </div>
+            </div>
+            <div class="blob pair-clr-primary-500 text-list-small">
+              <p>
+                During this session, we'll delve into crucial topics such as
+                cellular physiology, organ systems, homeostasis, and more. Led
+                by experienced peers who have aced the course themselves, this
+                study group offers a dynamic environment where you can ask
+                questions, engage in discussions, and clarify doubts in a
+                supportive setting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
